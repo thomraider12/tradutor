@@ -68,3 +68,11 @@ icons.forEach(icon => {
         }
     });
 });
+
+document.addEventListener("keydown", function(event) {
+    // Check if both Shift and Enter keys are pressed
+    if (event.shiftKey && event.key === "Enter") {
+        event.preventDefault(); // Prevent any default action
+        document.getElementById("traduzirbtn").click(); // Simulate button click
+    }
+});
